@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boutique - Admin</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+              <li><a href="index.html">Boutique</a></li>
+              <li><a href="panier.html">Panier</a></li>
+              <li><a href="admin.html">Admin</a></li>
+            </ul>
+          </nav>
+    </header>
+
+    <div class="container">
+        <main>
+
+            <h1>Admin - Ajouter, modifier ou supprimer des articles</h1>
+
+            <div class="table-list-head">
+                <div class="e">ID</div>
+                <div class="e">Nom</div>
+                <div class="e">Description</div>
+                <div class="e">Prix</div>
+                <div class="e">Modifier</div>
+                <div class="e">Supprimer</div>
+            </div>
+            <ul class="table-list" id="articles-out">
+
+                <!-- Ce qu'on insère : -->
+                <!-- <li>
+                    <div class="e">${article.id}</div>
+                    <div class="e">${article.nom}</div>
+                    <div class="e">${article.description}</div>
+                    <div class="e">${article.prix} €</div>
+                    <div class="e center"><button class="mini-btn btn-warning" onclick="editArticle('${article.id}')">Modifier</button></div>
+                    <div class="e center"><button class="mini-btn btn-danger" onclick="deleteArticle('${article.id}')">Supprimer</button></div>
+                </li> -->
+
+            </ul>
+
+
+            <div id="add-article-form-container">
+                <h2>Ajouter un nouvel article</h2>
+                <form id="add-article-form" class="form-box">
+                    <div>
+                        <label for="nom">Nom de l'article :
+                            <input type="text" id="nom" required>
+                        </label>
+                    </div>
+    
+                    <div>
+                        <label for="description">Description :</label>
+                        <textarea id="description" required></textarea>
+                    </div>
+
+                    <div>
+                        <label for="prix">Prix (en €) :
+                            <input type="number" id="prix" step="0.01" required>
+                        </label>
+                    </div>
+    
+                    <button type="submit" class="btn btn-success">Ajouter l'article</button>
+                </form>
+            </div>
+
+
+            <div id="edit-article-form-container" class="hidden">
+                <h2>Éditer article : <span id="id-edit"></span></h2>
+                <form id="edit-article-form" class="form-box">
+                    <div>
+                        <label for="edit-nom">Nom de l'article :
+                            <input type="text" id="edit-nom" required>
+                        </label>
+                    </div>
+
+                    <div>
+                        <label for="edit-description">Description:</label>
+                        <textarea id="edit-description" required></textarea>
+                    </div>
+                    
+                    <div>
+                        <label for="edit-prix">Prix (en €) :
+                            <input type="number" id="edit-prix" step="0.01" required>
+                        </label>
+                    </div>
+    
+                    <button type="submit" class="mini-btn btn-success">Modifier l'article</button>
+                </form>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="assets/script.js"></script>
+    
+</body>
+</html>
